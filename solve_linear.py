@@ -194,19 +194,25 @@ def main():
                 x_as_a_string = input("Enter a value for x: ")
                 b_as_a_string = input("Enter a value for b: ")
 
-                # try catch to make sure inputs show no errors
+                # nested try catch to make sure inputs show no errors
                 try:
                     m = float(m_as_a_string)
-                    x = float(x_as_a_string)
-                    b = float(b_as_a_string)
+                    try:
+                        x = float(x_as_a_string)
+                        try:
+                            b = float(b_as_a_string)
 
-                    # if statement to check if 0 is greater than b
-                    if 0 > b:
-                        solve_for_y2(m, x, b)
-                    else:
-                        solve_for_y(m, x, b)
-                except TypeError:
-                    print("Enter a valid value.")
+                            # if statement to check if 0 is greater than b
+                            if 0 > b:
+                                solve_for_y2(m, x, b)
+                            else:
+                                solve_for_y(m, x, b)
+                        except ValueError:
+                            print("\nEnter a valid value.")
+                    except ValueError:
+                        print("\nEnter a valid value.")
+                except ValueError:
+                    print("\nEnter a valid value.")
 
             # case #2
             case 2:
@@ -219,24 +225,29 @@ def main():
                 b_as_a_string = input("Enter a value for b: ")
                 m_as_a_string = input("Enter a value for m: ")
 
-                # try catch to make sure inputs show no errors
+                # nested try catch to make sure inputs show no errors
                 try:
                     y = float(y_as_a_string)
-                    b = float(b_as_a_string)
-                    m = float(m_as_a_string)
+                    try:
+                        b = float(b_as_a_string)
+                        try:
+                            m = float(m_as_a_string)
+                            # if statement to make sure m = 0 as thats an error
+                            if m == 0:
+                                print("\nYour m cannot be 0.")
+                            else:
 
-                    # if statement to make sure m = 0 as thats an error
-                    if m == 0:
-                        print("\nYour m cannot be 0.")
-                    else:
-
-                        # if statement to check if b is negative or positive
-                        if 0 > b:
-                            solve_for_x2(y, b, m)
-                        else:
-                            solve_for_x(y, b, m)
-                except TypeError:
-                    print("Enter a valid value.")
+                                # if statement to check if b is negative or positive
+                                if 0 > b:
+                                    solve_for_x2(y, b, m)
+                                else:
+                                    solve_for_x(y, b, m)
+                        except ValueError:
+                            print("\nEnter a valid value.")
+                    except ValueError:
+                        print("\nEnter a valid value.")
+                except ValueError:
+                    print("\nEnter a valid value.")
 
             # case #3
             case 3:
@@ -249,24 +260,28 @@ def main():
                 b_as_a_string = input("Enter a value for b: ")
                 x_as_a_string = input("Enter a value for x: ")
 
-                # try catch to make sure values have no errors
+                # nested try catch to make sure values have no errors
                 try:
                     y = float(y_as_a_string)
-                    b = float(b_as_a_string)
-                    x = float(x_as_a_string)
-
-                    # if statement to make sure x doesn't equal 0
-                    if x == 0:
-                        print("\nYour x cannot be 0.")
-                    else:
-
-                        # if statement to check if b is negative or positive
-                        if 0 > b:
-                            solve_for_m2(y, b, x)
-                        else:
-                            solve_for_m(y, b, x)
-                except TypeError:
-                    print("Enter a valid value.")
+                    try:
+                        b = float(b_as_a_string)
+                        try:
+                            x = float(x_as_a_string)
+                            # if statement to make sure x doesn't equal 0
+                            if x == 0:
+                                print("\nYour x cannot be 0.")
+                            else:
+                                # if statement to check if b is negative or positive
+                                if 0 > b:
+                                    solve_for_m2(y, b, x)
+                                else:
+                                    solve_for_m(y, b, x)
+                        except ValueError:
+                            print("\nEnter a valid value.")
+                    except ValueError:
+                        print("\nEnter a valid value.")
+                except ValueError:
+                    print("\nEnter a valid value.")
 
             # case #4
             case 4:
@@ -279,16 +294,22 @@ def main():
                 m_as_a_string = input("Enter a value for m: ")
                 x_as_a_string = input("Enter a value for x: ")
 
-                # Try catch to make sure no errors in values
+                # Nested try catch to make sure no errors in values
                 try:
                     y = float(y_as_a_string)
-                    m = float(m_as_a_string)
-                    x = float(x_as_a_string)
+                    try:
+                        m = float(m_as_a_string)
+                        try:
+                            x = float(x_as_a_string)
 
-                    # function to solve for b
-                    solve_for_b(y, m, x)
-                except TypeError:
-                    print("Enter a valid value.")
+                            # function to solve for b
+                            solve_for_b(y, m, x)
+                        except ValueError:
+                            print("\nEnter a valid value.")
+                    except ValueError:
+                        print("\nEnter a valid value.")
+                except ValueError:
+                    print("\nEnter a valid value.")
 
         # defining use_again to see if user wants to use again or stop
         use_again = input("\n" * 2 + "Do you want to use it again? (y/n): ")
