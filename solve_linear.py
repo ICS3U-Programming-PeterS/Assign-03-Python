@@ -21,7 +21,7 @@ def solve_for_y(m, x, b):
         + "x + "
         + str(b)
         + "."
-        + "\n" * 2
+        + "\n" 
     )
 
 
@@ -38,7 +38,7 @@ def solve_for_y2(m, x, b):
         + "x - "
         + str(abs(b))
         + "."
-        + "\n" * 2
+        + "\n" 
     )
 
 
@@ -55,7 +55,7 @@ def solve_for_x(y, b, m):
         + "x + "
         + str(b)
         + "."
-        + "\n" * 2
+        + "\n" 
     )
 
 
@@ -72,7 +72,7 @@ def solve_for_x2(y, b, m):
         + "x + "
         + str(abs(b))
         + "."
-        + "\n" * 2
+        + "\n" 
     )
 
 
@@ -89,7 +89,7 @@ def solve_for_m(y, b, x):
         + "x + "
         + str(b)
         + "."
-        + "\n" * 2
+        + "\n" 
     )
 
 
@@ -106,7 +106,7 @@ def solve_for_m2(y, b, x):
         + "x + "
         + str(abs(b))
         + "."
-        + "\n" * 2
+        + "\n" 
     )
 
 
@@ -124,7 +124,7 @@ def solve_for_b(y, m, x):
             + "x + "
             + str(solve_b)
             + "."
-            + "\n" * 2
+            + "\n" 
         )
     else:
         print(
@@ -137,7 +137,7 @@ def solve_for_b(y, m, x):
             + "x - "
             + str(abs(solve_b))
             + "."
-            + "\n" * 2
+            + "\n" 
         )
 
 
@@ -161,6 +161,7 @@ def main():
 
             # display choices to the user
             print("Choose from one of the following options:")
+            print("Welcome to the world's greatest calculator!")
             print(
                 "\t [1]"
                 " Solve for y -- y=mx+b \n \t [2] Solve for x -- x=(y-b)/m"
@@ -312,7 +313,7 @@ def main():
                     print("\nEnter a valid value.")
 
         # defining use_again to see if user wants to use again or stop
-        use_again = input("\n" * 2 + "Do you want to use it again? (y/n): ")
+        use_again = input("\n" + "Do you want to use it again? (y/n): ")
 
         # if statement that stops the program if use again != y
         if not use_again == "y":
