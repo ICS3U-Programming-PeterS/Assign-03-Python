@@ -21,7 +21,7 @@ def solve_for_y(m, x, b):
         + "x + "
         + str(b)
         + "."
-        + "\n" 
+        + "\n"
     )
 
 
@@ -38,7 +38,7 @@ def solve_for_y2(m, x, b):
         + "x - "
         + str(abs(b))
         + "."
-        + "\n" 
+        + "\n"
     )
 
 
@@ -55,7 +55,7 @@ def solve_for_x(y, b, m):
         + "x + "
         + str(b)
         + "."
-        + "\n" 
+        + "\n"
     )
 
 
@@ -72,7 +72,7 @@ def solve_for_x2(y, b, m):
         + "x + "
         + str(abs(b))
         + "."
-        + "\n" 
+        + "\n"
     )
 
 
@@ -89,7 +89,7 @@ def solve_for_m(y, b, x):
         + "x + "
         + str(b)
         + "."
-        + "\n" 
+        + "\n"
     )
 
 
@@ -106,7 +106,7 @@ def solve_for_m2(y, b, x):
         + "x + "
         + str(abs(b))
         + "."
-        + "\n" 
+        + "\n"
     )
 
 
@@ -124,7 +124,7 @@ def solve_for_b(y, m, x):
             + "x + "
             + str(solve_b)
             + "."
-            + "\n" 
+            + "\n"
         )
     else:
         print(
@@ -137,7 +137,7 @@ def solve_for_b(y, m, x):
             + "x - "
             + str(abs(solve_b))
             + "."
-            + "\n" 
+            + "\n"
         )
 
 
