@@ -161,7 +161,6 @@ def main():
 
             # display choices to the user
             print("Choose from one of the following options:")
-            print("Welcome to the world's greatest calculator!")
             print(
                 "\t [1]"
                 " Solve for y -- y=mx+b \n \t [2] Solve for x -- x=(y-b)/m"
